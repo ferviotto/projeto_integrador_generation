@@ -4,3 +4,10 @@ O projeto visa criar um marketplace de produtos de saúde sexual, reprodutiva e 
 Além disso, funciona como um hub de educação em saúde, promovendo a disseminação de informações e conhecimentos úteis sobre os produtos e temas relevantes. 
 O nome do aplicativo é IntiCare, e ele opera por meio de parcerias com farmácias e profissionais da saúde. 
 Trata-se de um projeto lucrativo ao centralizar a oferta de produtos e proporcionar um público amplo para os parceiros em questão, além de ser social e de extrema importância para a saúde pública.
+
+## Primeira Etapa
+Objetivo:  Modelar e implementar o banco de dados referente ao modelo do projeto.
+Descrição: 
+1. Criação do DER do banco de dados;
+2. Criação de apenas  3 tabelas;
+3. Criação do DER através do MySQL Workbench.
