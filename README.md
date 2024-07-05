@@ -15,3 +15,15 @@ Descrição:
 1. Criação do DER do banco de dados db_intcare;
 2. Criação de apenas 3 tabelas: tb_categorias, tb_produtos e tb_usuario;
 3. Criação do DER através do MySQL Workbench.
+
+## Segunda Etapa
+
+Objetivo:  Modelar e implementar o banco de dados referente ao modelo do projeto.
+
+Descrição: 
+1. Criação do projeto no Spring Initializr. Dependências utilizadas: Spring WEB, Spring dev tools, Spring data JPA, MySQL driver, validation e lombok;
+3. Configuração do arquivo application.properties para conectar com o Banco de dados;
+4. Criação da Classe Model CategoriasModel;
+5. Criação dos atributos estabelecidos na DER;
+6. Criação dos métodos get and set;
+7. Criação da Interface Repository CategoriaRepository.
