@@ -1,5 +1,7 @@
 # Projeto Integrador - Bootcamp Generation
 
+Integrantes do projeto: Carlos Eduardo, Daniele Santos, Edvaldo Junior, Fernanda Viotto De Gobbi, Guilherme Soares, Samuel Sá e Sara Monteiro.
+
 Resumo:
 Projeto Integrador feito em grupo para a conclusão de curso do Bootcamp da Generation patrocinado pela Microsoft - T75. 
 O projeto visa criar um marketplace de produtos de saúde sexual, reprodutiva e higiene pessoal com preços mais justos, facilitando o acesso equitativo aos consumidores, e incluindo a opção de doação de produtos para pessoas em situações de risco. 
@@ -12,9 +14,10 @@ Trata-se de um projeto lucrativo ao centralizar a oferta de produtos e proporcio
 Objetivo:  Modelar e implementar o banco de dados referente ao modelo do projeto.
 
 Descrição: 
-1. Criação do DER do banco de dados db_intcare;
-2. Criação de apenas 3 tabelas: tb_categorias, tb_produtos e tb_usuario;
-3. Criação do DER através do MySQL Workbench.
+1. Upload do arquivo PDF da explicação do projeto;
+2. Criação do DER do banco de dados db_intcare;
+3. Criação de apenas 3 tabelas: tb_categorias, tb_produtos e tb_usuario;
+4. Criação do DER através do MySQL Workbench.
 
 ## Segunda Etapa
 
