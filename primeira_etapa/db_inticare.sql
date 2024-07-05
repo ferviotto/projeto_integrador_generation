@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS `db_inticare`.`tb_categorias` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-
 CREATE TABLE IF NOT EXISTS `db_inticare`.`tb_usuario` (
   `id` BIGINT AUTO_INCREMENT,
   `nome_usuario` VARCHAR(255) NOT NULL,
@@ -45,7 +44,6 @@ CREATE TABLE IF NOT EXISTS `db_inticare`.`tb_produtos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
