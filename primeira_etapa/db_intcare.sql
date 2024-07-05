@@ -2,10 +2,10 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
-CREATE SCHEMA IF NOT EXISTS `db_intcare` DEFAULT CHARACTER SET utf8 ;
-USE `db_intcare` ;
+CREATE SCHEMA IF NOT EXISTS `db_inticare` DEFAULT CHARACTER SET utf8 ;
+USE `db_inticare` ;
 
-CREATE TABLE IF NOT EXISTS `db_intcare`.`tb_categorias` (
+CREATE TABLE IF NOT EXISTS `db_inticare`.`tb_categorias` (
   `id` BIGINT AUTO_INCREMENT,
   `nome_categoria` VARCHAR(255) NOT NULL,
   `genero` VARCHAR(100) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `db_intcare`.`tb_categorias` (
 ENGINE = InnoDB;
 
 
-CREATE TABLE IF NOT EXISTS `db_intcare`.`tb_usuario` (
+CREATE TABLE IF NOT EXISTS `db_inticare`.`tb_usuario` (
   `id` BIGINT AUTO_INCREMENT,
   `nome_usuario` VARCHAR(255) NOT NULL,
   `email_usuario` VARCHAR(255) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `db_intcare`.`tb_usuario` (
   UNIQUE INDEX `usuario_UNIQUE` (`email_usuario` ASC) VISIBLE)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `db_intcare`.`tb_produtos` (
+CREATE TABLE IF NOT EXISTS `db_inticare`.`tb_produtos` (
   `id` BIGINT AUTO_INCREMENT,
   `prod_nome` VARCHAR(100) NOT NULL,
   `prod_descricao` VARCHAR(255) NOT NULL,
@@ -36,12 +36,12 @@ CREATE TABLE IF NOT EXISTS `db_intcare`.`tb_produtos` (
   INDEX `fk_tb_produtos_tb_usuario1_idx` (`tb_usuario_id` ASC) VISIBLE,
   CONSTRAINT `fk_tb_produtos_tb_categorias`
     FOREIGN KEY (`tb_categorias_id`)
-    REFERENCES `db_intcare`.`tb_categorias` (`id`)
+    REFERENCES `db_inticare`.`tb_categorias` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_tb_produtos_tb_usuario1`
     FOREIGN KEY (`tb_usuario_id`)
-    REFERENCES `db_intcare`.`tb_usuario` (`id`)
+    REFERENCES `db_inticare`.`tb_usuario` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
