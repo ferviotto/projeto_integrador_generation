@@ -11,7 +11,7 @@ Trata-se de um projeto lucrativo ao centralizar a oferta de produtos e proporcio
 
 ## Primeira Etapa
 
-Objetivo:  Modelar e implementar o banco de dados referente ao modelo do projeto.
+Objetivo:  modelar e implementar o banco de dados referente ao modelo do projeto.
 
 Descrição: 
 1. Upload do arquivo PDF da explicação do projeto;
@@ -21,7 +21,7 @@ Descrição:
 
 ## Segunda Etapa
 
-Objetivo:  Modelar e implementar o banco de dados referente ao modelo do projeto.
+Objetivo: criar o projeto Spring no Spring Initializer.
 
 Descrição: 
 1. Criação do projeto no Spring Initializr. Dependências utilizadas: Spring WEB, Spring dev tools, Spring data JPA, MySQL driver, validation e lombok;
@@ -30,3 +30,15 @@ Descrição:
 5. Criação dos atributos estabelecidos na DER;
 6. Criação dos métodos get and set;
 7. Criação da Interface Repository CategoriaRepository.
+
+## Terceira Etapa
+
+Objetivo: criar o CRUD do projeto Spring.
+
+Descrição:
+1. Criação da Classe Controller CategoriaController;
+2. Criação dos métodos básicos do CRUD: findAll(), findById(), post(), pull() e delete().
+3. Criação dos métodos específicos: findAllByGeneroContainingIgnoreCase() e findAllByNomeCategoriaContainingIgnoreCase ().
+4. Edição da Interface Repository CategoriaRepository com a adição dos métodos específicos.
+5. Edição da Classe Model CategoriaModel, mudando a String 'nome' para 'nomeCategoria'.
+6. Testes das API's no Insomnia.
