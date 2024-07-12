@@ -14,9 +14,9 @@ Trata-se de um projeto lucrativo ao centralizar a oferta de produtos e proporcio
 Objetivo:  modelar e implementar o banco de dados referente ao modelo do projeto.
 
 Descrição: 
-1. Upload do arquivo PDF da explicação do projeto;
-2. Criação do DER do banco de dados db_intcare;
-3. Criação de apenas 3 tabelas: tb_categorias, tb_produtos e tb_usuario;
+1. Upload do arquivo PDF da explicação do projeto.
+2. Criação do DER do banco de dados db_intcare.
+3. Criação de apenas 3 tabelas: tb_categorias, tb_produtos e tb_usuario.
 4. Criação do DER através do MySQL Workbench.
 
 ## Segunda Etapa
@@ -24,11 +24,11 @@ Descrição:
 Objetivo: criar o projeto Spring no Spring Initializer.
 
 Descrição: 
-1. Criação do projeto no Spring Initializr. Dependências utilizadas: Spring WEB, Spring dev tools, Spring data JPA, MySQL driver, validation e lombok;
-3. Configuração do arquivo application.properties para conectar com o Banco de dados;
-4. Criação da Classe Model CategoriasModel;
-5. Criação dos atributos estabelecidos na DER;
-6. Criação dos métodos get and set;
+1. Criação do projeto no Spring Initializr. Dependências utilizadas: Spring WEB, Spring dev tools, Spring data JPA, MySQL driver, validation e lombok.
+3. Configuração do arquivo application.properties para conectar com o Banco de dados.
+4. Criação da Classe Model CategoriasModel.
+5. Criação dos atributos estabelecidos na DER.
+6. Criação dos métodos get and set.
 7. Criação da Interface Repository CategoriaRepository.
 
 ## Terceira Etapa
@@ -36,9 +36,27 @@ Descrição:
 Objetivo: criar o CRUD do projeto Spring.
 
 Descrição:
-1. Criação da Classe Controller CategoriaController;
+1. Criação da Classe Controller CategoriaController.
 2. Criação dos métodos básicos do CRUD: findAll(), findById(), post(), pull() e delete().
 3. Criação dos métodos específicos: findAllByGeneroContainingIgnoreCase() e findAllByNomeCategoriaContainingIgnoreCase ().
 4. Edição da Interface Repository CategoriaRepository com a adição dos métodos específicos.
 5. Edição da Classe Model CategoriaModel, mudando a String 'nome' para 'nomeCategoria'.
 6. Testes das API's no Insomnia.
+
+## Quarta Etapa
+
+Objetivo: criar o segundo CRUD com relacionamento do projeto Spring.
+
+Descrição:
+1. Criação das Classes Model UsuarioModel e ProdutoModel.
+2. Criação dos atributos estabelecidos na DER.
+3. Edição da Classe Model ProdutoModel, mudando a String 'nome' para 'nomeProduto'.
+4. Criação dos métodos get and set.
+5. Criação dos métodos básicos do CRUD: findAll(), findById(), post(), pull() e delete().
+6. Criação do método específico findAllByNomeProdutoContainingIgnoreCase().
+7. Criação das Interfaces Repository ProdutoRepository e UsuarioRepository.
+8. Criação da Relação OneToMany na Classe Model CategoriaModel com a Classe Model ProdutoModel.
+9. Criação da Relação OneToMany na Classe Model UsuarioModel com a Classe Model ProdutoModel.
+10. Criação da Relação ManyToOne na Classe Model ProdutoModel com a Classe Model CategoriaModel.
+11. Criação da Relação ManyToOne na Classe Model ProdutoModel com a Classe Model UsuarioModel.
+12. Testes das API's no Insomnia.
