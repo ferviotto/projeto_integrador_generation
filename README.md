@@ -60,3 +60,21 @@ Descrição:
 10. Criação da Relação ManyToOne na Classe Model ProdutoModel com a Classe Model CategoriaModel.
 11. Criação da Relação ManyToOne na Classe Model ProdutoModel com a Classe Model UsuarioModel.
 12. Testes das API's no Insomnia.
+
+## Quinta Etapa
+
+Objetivo: implementação do Spring Security.
+
+Descrição: 
+1. Adição das dependências de security na pom.
+2. Criação das Classes Model Usuario e UsuarioLogin.
+3. Criação dos atributos.
+4. Criação dos métodos get and set.
+5. Criação da Classe Controller UsuarioController.
+6. Criação dos métodos básicos do CRUD: findAll(), findById(), post(), pull() e delete().
+7. Criação da Interface Repository UsuarioRepository.
+8. Criação do método específico: findByUsuario().
+9. Criação do package security com as devidas classes: BasicSecurityConfig, JwtAuthFilter, JwtService, UserDetailsImp, UserDetailsServiceImpl.
+10. Criação do package service com a classe UsuarioService.
+11. Ajustes no código.
+12. Testes das API's no Insomnia.
