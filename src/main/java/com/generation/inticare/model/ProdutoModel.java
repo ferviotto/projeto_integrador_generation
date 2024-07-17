@@ -8,6 +8,7 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Table (name = "tb_produto")
 public class ProdutoModel {
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

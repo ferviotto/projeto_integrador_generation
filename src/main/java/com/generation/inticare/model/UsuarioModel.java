@@ -1,5 +1,6 @@
 package com.generation.inticare.model;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -10,73 +11,75 @@ import java.util.List;
 @Entity
 @Table (name = "tb_usuario")
 public class UsuarioModel {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 
-	@NotBlank(message = "O nome do usuário é obrigatorio!")
-	@Size(max = 255, message = "O texto deve conter até 255 caracteres")
-	private String nome;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@NotBlank(message = "O email do usuário é obrigatorio!")
-	@Size(max = 255, message = "O texto deve conter até 255 caracteres")
-	private String email;
+    @NotBlank(message = "O nome do usuário é obrigatorio!")
+    @Size(max = 255, message = "O texto deve conter até 255 caracteres")
+    private String nome;
 
-	@NotBlank(message = "O nome do produto é obrigatorio!")
-	@Size(min = 7, max = 55, message = "O texto deve conter de 7 até 55 caracteres")
-	private String senha;
+    @NotBlank(message = "O email do usuário é obrigatorio!")
+    @Size(max = 255, message = "O texto deve conter até 255 caracteres")
+    @Column(name = "email")
+    private String usuario;
 
-	private String foto;
+    @NotBlank(message = "O nome do produto é obrigatorio!")
+    @Size(min = 7, message = "O texto deve conter no mínimo 7caracteres")
+    private String senha;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "nomeProduto", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("nomeProduto")
-	private List<ProdutoModel> produtoModels;
+    private String foto;
 
-	public Long getId() {
-		return id;
-	}
+    @OneToMany(mappedBy = "usuarioModel", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JsonIgnoreProperties("usuarioModel")
+    private List<ProdutoModel> produtos;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getUsuario() {
+        return usuario;
+    }
 
-	public String getSenha() {
-		return senha;
-	}
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+    public String getSenha() {
+        return senha;
+    }
 
-	public String getFoto() {
-		return foto;
-	}
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
+    public String getFoto() {
+        return foto;
+    }
 
-	public List<ProdutoModel> getProdutoModels() {
-		return produtoModels;
-	}
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 
-	public void setProdutoModels(List<ProdutoModel> produtoModels) {
-		this.produtoModels = produtoModels;
-	}   
+    public List<ProdutoModel> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<ProdutoModel> produtos) {
+        this.produtos = produtos;
+    }
 }
